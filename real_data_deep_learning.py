@@ -74,8 +74,9 @@ for train, test in kfold.split(X):
         
 resx=res_array.mean(axis=(0))
 m_inx=np.where(resx == np.min(resx))        
-l_num=layers[int(m_inx[0])]
+l_inx=layers[int(m_inx[0])]
 n_inx=nodes[int(m_inx[1])]
+l_num=2
 model = Sequential()
 model.add(Dense(n_inx, input_dim=6, activation='relu'))
 while l_num < l_inx:
