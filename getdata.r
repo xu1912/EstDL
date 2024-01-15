@@ -156,8 +156,8 @@ gedata_modified <- function(B,N,nA,C,id_m, err_term="n"){
   MsIA0 <- apply(M2,1,fsA)
   sIA   <- as.numeric(MsIA0)
 
-  if (id_m %in% c(1,2,3)){
-    ## M1-M3 sample B ----
+  if (id_m %in% c(1)){
+    ## M1-M2 sample B ----
     ### Experiment with c = -4, something else, to get a good proportion of the data--about 500.
     rho=c(0.8174850, -1.8716409, -1.1715428, -0.3204672)
     C=-2.8
@@ -175,8 +175,8 @@ gedata_modified <- function(B,N,nA,C,id_m, err_term="n"){
   }
 
 
-  if (id_m == 4){
-    #rho <- runif(3,min = 1,max = 3)
+  if (id_m == 3{
+    #rho <- runif(3,min = -2,max = 2)
     rho=c(1.0206762,-0.7120927, 1.6224493)
     ## M4 sample B ----
     ### Experiment with c = 1, etc. until you get sample B's n = ~500.
