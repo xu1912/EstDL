@@ -71,24 +71,16 @@ gedata_modified <- function(B,N,nA,C,id_m, err_term="n"){
 
   # For index == 2 ----
   if (id_m == 2){
-   # y <- 1 + 1.481344*x1^2 + -1.860457*x2^2 + 1.978122*x3^2 + -1.713827*x4^2 + epsilon
     x1 <- runif(B*N,1,3)
     x2 <- runif(B*N,1,3)
     x3 <- runif(B*N,1,3)
     x4 <- runif(B*N,1,3)
 
     y <- 3 + 0.2*x1*x2*x3^3 + 0.3*x3*x4  + rnorm(B*N, sd=1)
-
   }
 
+  # For index == 3 ----
   if (id_m == 3){
-    #y <- 1 + -0.1641609*abs(x1) + -0.4648368*x2*x3 + -0.3519404*x3*x4^2 + 0.8642934*x1*x2*x4 + epsilon
-    y <- 1 + -0.1641609*abs(x1) + -0.4648368*x2*x3 + -0.3519404*x3*x4^2 + 0.8642934*x1*x2*x4 + rnorm(B*N, sd=0.1)
-    #y <- 1 + -0.1641609*x1^2 + -0.4648368*x1*x2*x3 + -0.3519404*x1*x2 + 0.8642934*x1*x2*x3*(x4^2) + rnorm(B*N, sd=0.1)
-  }
-
-  # For index == 4 ----
-  if (id_m == 4){
     range_min <- -2
     range_max <- 2
 
